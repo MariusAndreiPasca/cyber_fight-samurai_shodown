@@ -1,0 +1,38 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+    <body style="display: flex; justify-content: center; align-items: center; ">
+
+        <div style="position: relative; display: inline-block">
+            <div style="position: absolute; display: flex; justify-content: flex-end; width: 100%; align-items: center; padding: 20px">
+                <!-- player HP -->
+                <div style="position: relative; width: 100%; display: flex; border: 4px solid white; border-right: none; border-top-left-radius: 15px; border-bottom-left-radius: 15px;">
+                    <div style="background-color: red; height: 30px; width: 100%; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"></div>
+                    <div id="playerHealth" style="position: absolute; background-color: green; top: 0; bottom: 0; right: 0; width: 100%; border-top-left-radius: 10px; border-bottom-left-radius: 10px;"></div>
+                </div>  
+                <!-- Timer -->               
+                <div id="timer" style="background-color: white; width: 100px; height: 100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-family: 'Press Start 2P', cursive;">10</div> 
+                <!-- enemy HP -->               
+                <div style="position: relative; border: 4px solid white; border-left: none; border-top-right-radius: 15px; border-bottom-right-radius: 15px; width: 100%">
+                    <div style="background-color: red; height: 30px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"></div>
+                    <div id="enemyHealth" style="position: absolute; background-color: green; top: 0; left: 0; bottom: 0; right: 0; border-top-right-radius: 10px; border-bottom-right-radius: 10px;"></div>
+                </div>               
+            </div>
+
+            <div id="tie" style="position: absolute; color: yellow; display: none; align-items: center; justify-content: center; font-size: 3rem; top: 0; left: 0; bottom: 0; right: 0; font-family: 'Press Start 2P', cursive;">
+                Tie
+            </div>
+            <canvas></canvas>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="./js/utils.js"></script>
+    <script src="./js/classes.js"></script>    
+    <script src="index.js"></script>
+    </body>
